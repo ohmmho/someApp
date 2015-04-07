@@ -20,8 +20,7 @@
     <%= f.text_field :url, class: "form-control" %>
   </div>
   <br>
-  
-  <div class="form-group">
+<div class="form-group">
   <% Category.all.each do |category| %>
     <%= check_box_tag "link[category_ids][]", category.id, @link.categories.include?(category) %>
     <%= category.name %>

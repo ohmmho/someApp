@@ -7,6 +7,6 @@ class Link < ActiveRecord::Base
 
   validates_format_of :url, :with => URI::regexp(%w(http https))
   validates :url, uniqueness: true
-  validates :category, presence: true
+  validates :category_ids, presence: true
 
 end
