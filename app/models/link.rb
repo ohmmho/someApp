@@ -5,4 +5,8 @@ class Link < ActiveRecord::Base
   has_many :categories, :through => :category_links
   has_many :category_links
 
+  validates_format_of :url, :with => URI::regexp(%w(http https))
+  validates :url, uniqueness: true
+  validates :category, presence: true
+
 end

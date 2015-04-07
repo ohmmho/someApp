@@ -8,8 +8,16 @@ Rails.application.routes.draw do
       put "dislike", to: "links#downvote"
     end
     resources :comments
+    resources :categories
+    resources :category_links
+
+    resources :links, :shallow => true do
+      resources :categories
+    end
   end
   root "links#index"
+
+  # get '/categories/1' => 'categories#show', as: :web
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

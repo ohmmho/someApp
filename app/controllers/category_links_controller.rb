@@ -1,0 +1,6 @@
+class CategoryLinksController < ApplicationController
+
+
+
+
+end

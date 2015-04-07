@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-categories_list = Category.create([{ name: 'Web' }, { name: 'UI' }, { name: 'Diseño' }, { name: 'Stock Foto' }, { name: 'Stock Video' }, { name: 'Iconos' }, { name: 'Mock Up' }, { name: 'Free Fonts' }, { name: 'Código' }])
+categories_list = Category.create([{ name: 'mockups' }, { name: 'plantillas' }, { name: 'psd' }, { name: 'vectores' }, { name: 'iconos' }, { name: 'fuentes libres' }, { name: 'ui/ux' }, { name: 'html/css ' }, { name: 'js-plugins' }, { name: 'foto' }, { name: 'fondos' }, { name: 'formación' }, { name: 'otros' }])

@@ -19,6 +19,8 @@
   <% end %>
 </div>
 
+<%= @link.category_ids %>
+
 <% if @link.user == current_user -%>
 	<div class="btn-group">
 		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
