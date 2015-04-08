@@ -19,7 +19,7 @@
   <% end %>
 </div>
 
-<%= @link.category.name %>
+<%= @link.categories.first.name %>
 
 <% if @link.user == current_user -%>
 	<div class="btn-group">
