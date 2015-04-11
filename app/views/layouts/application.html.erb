@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header class="navbar navbar-default" role="navigation">
+	<header class="navbar navbar-default " role="navigation">
 	    <div class="navbar-inner">
 	      <div class="container">
 	      	<img src="/assets/logo.png" alt="logo" id="pill">
@@ -53,29 +53,38 @@
 				<li><a href="/categories/11" title="fondos">Fondos<img src="/assets/8.png" /></a>
 				<li><a href="/categories/12" title="formacion">Formación<img src="/assets/8.png" /></a>
 				</li>	
-				<li><a href="/categories/13" title="otros">Otros<img src="/assets/8.png" /></a>							
+				<li><a href="/categories/13" title="otros">Otros<img src="/assets/8.png" /></a>	</li>						
 				</ul>
 			</div>
 	    </div>
     </header>
 
 	<div id="main_content" class="container">
+
+			<div id="content" class="col-md-9 center-block">
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
-
-			<div id="content" class="col-md-9 center-block">
 				<%= yield %>
 				<img src="/assets/BANNER.png" alt="logo" id="banner">
 			</div>
 		</div>
-	</div>
-		<img src="/assets/ordenador.png" alt="logo" id="ordenador">
-	    <div class="navbar-inner footer"> 
-	    	<a class="amarillo" href="mailto:someone@example.com?Subject=Hola" target="_top">Contacto</a>
-	    	<a class="azul" href=" URL_de_la_pagina " title="pestaña4">Acceso a tu cuenta</a>
+
+	<footer class="footer">
 	    
-    	
- 	 </div>
+	  <div class="navbar-inner"> 
+	    <ul class="list-inline">
+	    	<li>
+	    		<a class="amarillo" >Contacto</a>
+	    	</li>
+	    	<li>
+	    		<a class="azul" href=" URL_de_la_pagina " title="pestaña4">Acceso a tu cuenta</a>
+	    	</li>
+	    	<li>
+	    		<img src="/assets/ordenador.png" alt="logo" id="ordenador"> 
+	    	</li>
+	    </ul>
+ 	 	</div>
+ 	</footer>
 </body>
 </html>

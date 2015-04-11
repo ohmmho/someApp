@@ -10,6 +10,7 @@
         <%= link_to link.title, link %><br>
         <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
       </h2>
+    <div >
       <div class="btn-group">
         <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
         <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
@@ -22,8 +23,11 @@
           Downvote
           <%= link.get_downvotes.size %>
         <% end %>
-
-        <%= link.categories.first.name %>
+      </div>
+      <div class="cat-box">
+         <img src="<%= link.categories.first.image %>">
+          <span class="cat-title"><%= link.categories.first.name %></span>
+      </div>
       </div>
     </div>
   </div>

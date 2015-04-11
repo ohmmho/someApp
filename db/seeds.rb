@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-categories_list = Category.create([{ name: 'mockups' }, { name: 'plantillas' }, { name: 'psd' }, { name: 'vectores' }, { name: 'iconos' }, { name: 'fuentes libres' }, { name: 'ui/ux' }, { name: 'html/css ' }, { name: 'js-plugins' }, { name: 'foto' }, { name: 'fondos' }, { name: 'formación' }, { name: 'otros' }])
+categories = Category.create([{ name: 'mockups', image: "/assets/1.png"}, { name: 'plantillas', image: "/assets/2.png" }, { name: 'psd', image: "/assets/3.png" }, { name: 'vectores', image: "/assets/4.png"  }, { name: 'iconos', image: "/assets/5.png" }, { name: 'fuentes libres', image: "/assets/6.png" }, { name: 'ui/ux', image: "/assets/7.png" }, { name: 'html/css', image: "/assets/8.png" }, { name: 'js-plugins', image: "/assets/8.png" }, { name: 'foto', image: "/assets/8.png" }, { name: 'fondos', image: "/assets/8.png" }, { name: 'formación', image: "/assets/8.png" }, { name: 'otros', image: "/assets/8.png" }])
