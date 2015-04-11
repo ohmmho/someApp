@@ -28,7 +28,10 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
+
     @link = current_user.links.build(link_params)
+    object = LinkThumbnailer.generate(@link.url)
+    @link.image = object.images.first.src.to_s
        respond_to do |format|
       if @link.save
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
@@ -89,6 +92,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url, { category_ids: [] })
+      params.require(:link).permit(:title, :url, { category_ids: [] }, :image)
     end
 end
